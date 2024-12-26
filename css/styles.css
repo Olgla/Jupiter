@@ -1,43 +1,26 @@
-@font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 200;
-    src: url('../fonts/raleway-v34-latin-200.woff2') format('woff2'); 
-  }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 300;
-    src: url('../fonts/raleway-v34-latin-300.woff2') format('woff2'); 
-  }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 400;
-    src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2'); 
-  }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';
-    font-weight: 600;
-    src: url('../fonts/raleway-v34-latin-600.woff2') format('woff2'); 
-  }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 700;
-    src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
-  }
+html {
+  scroll-behavior: smooth;
+}
 
+/* * {
+  border: pink dotted 1px;
+} */
 
 body {
     background: black;
     color: white;
-    font-family: "Raleway", sans-serif;  /**/
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1288px;
+  margin: auto;
+  -webkit-font-smoothing: antialiased; /*font smoothing*/ 
 }
 
 li {
     list-style-type: none;
+}
+
+h1, h2, h3, p {  /*word wrappin without hyphens (hyphens: auto;) */
+  overflow-wrap: break-word;
 }
 
 h1 {
@@ -64,16 +47,62 @@ a:hover {
   color: rgb(0, 200, 0);
 }
 
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 10px;  
+  align-items: center; 
+}
+
+ul li {
+  display: inline;  
+}
+
+.experience-li {
+  display: block;
+}
+
+/*experience*/
+.experience-table {
+  padding: 0 15%;
+  width: 100%;  
+}
+
+.experience-item {
+  text-align: left;
+  width: 80%;
+  padding: 2%;  
+}
+
+.experience-date {
+  align-content: flex-start;
+  padding-top: 2%;
+  width: 20%;  
+}
+
 .section {
   padding: 10px;   /**/
   text-align: center;
+  max-width: 1288px;
 }
 
-.experience-li {   /**/
-  display:block;
+
+#experience ul {
+  flex-direction: column;
 }
 
-.connect-li {
-  display:inline;
-  padding:10px;
+a img {
+  width: 32px;
+}
+
+#connect ul {  
+  gap: 64px;
+  justify-content: center;
+}
+
+.connect-li {  
+  display: inline;  
 }
