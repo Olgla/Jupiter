@@ -33,14 +33,13 @@ h1, h2 {
   text-align: center;  
 }
 
-
 a:link {
   text-decoration: none;
   color: white;
 }
 
 a:visited {
-  text-decoration: none;
+  /* text-decoration: none; */
   color:white;
 }
 
@@ -49,7 +48,7 @@ a:hover {
 }
 
 .section {
-  padding: 10px;   /**/
+  padding: 10px;   
   text-align: center;  
 }
 
@@ -80,23 +79,25 @@ a:hover {
 
 
 /*experience*/
-.experience-table {
-  padding: 0 15%;
-  width: 100%;  
-}
-
-
 .exp-ul {
   flex-direction: column;
 }
 
-.connect-ul {  
-  gap: 64px;
+/* Connect */
+.connect-ul {
+  display: flex;
   justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  gap: 16px;
+  padding: inherit;
+  align-items: center;
 }
 
+
 .connect-li {  
-  display: inline;  
+  flex-direction: column;  
 }
 
 .connect-ul img {

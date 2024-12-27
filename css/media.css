@@ -54,4 +54,11 @@
     /* margin: 0 16px; */
   }
 
+  .connect-ul {   
+    flex-direction: row;    
+  }
+
+  .connect-li {  
+    flex-direction: column;  
+  }
 }
