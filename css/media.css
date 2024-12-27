@@ -36,4 +36,22 @@
       background-color: rgb(26, 26, 26); 
       z-index: 1000; 
   }
+
+  .header-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header-menu {
+    display: flex;        
+    justify-content: center;    
+    flex-direction: row;    
+    padding: 0 10px;
+  }
+  
+  .hrd-menu-itm {
+    padding: 0 10px;
+    /* margin: 0 16px; */
+  }
+
 }

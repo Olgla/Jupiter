@@ -3,35 +3,36 @@ html {
 }
 
 /* * {
-  border: pink dotted 1px;
+  border: pink dotted 1px;  
 } */
 
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
-    background: black;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 1288px;
-  margin: auto;
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;  
+  margin: 0;
   -webkit-font-smoothing: antialiased; /*font smoothing*/ 
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 h1, h2, h3, p {  /*word wrappin without hyphens (hyphens: auto;) */
   overflow-wrap: break-word;
 }
 
-h1 {
-  text-align: center;
-  font-size:200% /**/
+h1, h2 {
+  text-align: center;  
 }
 
-h2 {              /**/
-  font-weight: 700;
-  color:aliceblue;
-}
 
 a:link {
   text-decoration: none;
@@ -47,23 +48,36 @@ a:hover {
   color: rgb(0, 200, 0);
 }
 
+.section {
+  padding: 10px;   /**/
+  text-align: center;  
+}
 
-ul {
+/* Header */
+.header-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  gap: 20px; 
-  padding: 10px;  
-  align-items: center; 
+  align-items: center;
+  gap: 16px;
 }
 
-ul li {
-  display: inline;  
+.header-nav {
+  display: flex;
+  justify-content: center;  
+  align-items: center;  
+  flex-direction: column;
 }
 
-.experience-li {
-  display: block;
+.header-nav img {
+  width: 32px;
 }
+
+.header-menu {
+  display: flex;
+  gap: 8px;  
+  justify-content: center;   
+  flex-direction: column;
+}
+
 
 /*experience*/
 .experience-table {
@@ -71,38 +85,20 @@ ul li {
   width: 100%;  
 }
 
-.experience-item {
-  text-align: left;
-  width: 80%;
-  padding: 2%;  
-}
 
-.experience-date {
-  align-content: flex-start;
-  padding-top: 2%;
-  width: 20%;  
-}
-
-.section {
-  padding: 10px;   /**/
-  text-align: center;
-  max-width: 1288px;
-}
-
-
-#experience ul {
+.exp-ul {
   flex-direction: column;
 }
 
-a img {
-  width: 32px;
-}
-
-#connect ul {  
+.connect-ul {  
   gap: 64px;
   justify-content: center;
 }
 
 .connect-li {  
   display: inline;  
+}
+
+.connect-ul img {
+  width: 32px;
 }
