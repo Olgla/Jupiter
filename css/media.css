@@ -30,6 +30,13 @@
   }
 
   @media (min-width: 480px) {
+    img {      
+      max-width: 100%;
+      height: auto;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+
     .sticky-header {
       position: sticky;
       top: 0;
@@ -54,6 +61,24 @@
     /* margin: 0 16px; */
   }
 
+  .about {    
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 0 32px;    
+  }
+  
+  .photo {
+    display: block;
+    width: 25%;
+  }
+
+  .hero-p {
+    max-width: 260px;
+    margin: 0;
+  }
+ 
   .connect-ul {   
     flex-direction: row;    
   }
