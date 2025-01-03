@@ -1,39 +1,111 @@
 @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 200;
-    src: url('../fonts/raleway-v34-latin-200.woff2') format('woff2'); 
+  font-display: swap; 
+  font-family: 'Raleway';    
+  font-weight: 200;
+  src: url('../fonts/raleway-v34-latin-200.woff2') format('woff2'); 
   }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 300;
-    src: url('../fonts/raleway-v34-latin-300.woff2') format('woff2'); 
+@font-face {
+  font-display: swap; 
+  font-family: 'Raleway';    
+  font-weight: 300;
+  src: url('../fonts/raleway-v34-latin-300.woff2') format('woff2'); 
   }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 400;
-    src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2'); 
+@font-face {
+  font-display: swap; 
+  font-family: 'Raleway';    
+  font-weight: 400;
+  src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2'); 
   }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';
-    font-weight: 600;
-    src: url('../fonts/raleway-v34-latin-600.woff2') format('woff2'); 
+@font-face {
+  font-display: swap; 
+  font-family: 'Raleway';
+  font-weight: 600;
+  src: url('../fonts/raleway-v34-latin-600.woff2') format('woff2'); 
   }  
-  @font-face {
-    font-display: swap; 
-    font-family: 'Raleway';    
-    font-weight: 700;
-    src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
+@font-face {
+  font-display: swap; 
+  font-family: 'Raleway';    
+  font-weight: 700;
+  src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
   }
 
-  @media (min-width: 480px) {
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      background-color: rgb(26, 26, 26); 
-      z-index: 1000; 
+@media (min-width: 480px) {
+  img {      
+    max-width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(26, 26, 26, 0.9); /*0.9 - opacity*/  
+    z-index: 1000; 
+    }
+
+  .header-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header-menu {
+    display: flex;        
+    justify-content: center;    
+    flex-direction: row;    
+    padding: 0 10px;
+    flex-grow: 0.5;
+    gap: 5%
+  }
+  
+  .hrd-menu-itm {
+    padding: 0 10px;
+    /* margin: 0 16px; */
+  }
+
+  .about {    
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 0 32px;    
+    margin-bottom: 3vh; /*3% of view port height*/
+  }
+    
+  .photo {
+    display: block;
+    width: 25%;
+  }
+
+  .hero-p {
+    max-width: 260px;
+    margin: 0;
+  }
+  
+  .connect-ul {   
+    flex-direction: row;    
+  }
+
+  .connect-li {  
+    flex-direction: column;  
+  }
+}
+
+@media (min-width: 720px) {
+  body {    
+    font-size: 120%;
+  }
+
+  .about {                /**/
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+  }
+
+  .hero {
+    font-size: 120%;
+  }
+
+  .hero-p {
+    max-width: 460px;
   }
 }
