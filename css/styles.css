@@ -3,10 +3,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* * {
-  border: pink dotted 1px;  
-} */
-
 *,
 *::before,
 *::after {
@@ -53,8 +49,7 @@ a:link {
   color: white;
 }
 
-a:visited {
-  /* text-decoration: none; */
+a:visited {  
   color:white;
 }
 
@@ -68,6 +63,10 @@ a:hover {
 }
 
 /* Header */
+.sticky-header {  
+  background-color: #282828e6; /*0.9 - opacity*/  
+  }
+
 .header-nav {
   display: flex;
   justify-content: center;  
@@ -118,7 +117,7 @@ a:hover {
 
 /* Connect */
 .connect-ul {
-  display: grid;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
@@ -134,3 +133,8 @@ a:hover {
 .connect-ul img {
   width: 32px;
 }
+
+/* Footer */
+.footer {  
+  background-color: rgba(26, 26, 26, 0.9); /*0.9 - opacity*/  
+  }
