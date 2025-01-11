@@ -86,9 +86,20 @@
   }
 }
 
+@media (min-width: 547px) {
+  .skills-ul {
+    margin: 0 2em;
+  }
+}
+
+
 @media (min-width: 720px) {
   body {    
     font-size: 120%;
+  }
+
+  .skills-ul {
+    margin: 0 3em;
   }
 
   .about {                /**/
@@ -102,6 +113,18 @@
 
   .hero-p {
     max-width: 460px;
+  }
+}
+
+@media (min-width: 780px) {
+  .skills-ul {
+    margin: 0 4em;
+  }
+}
+
+@media (min-width: 860px) {
+  .skills-ul {
+    margin: 0 5em;
   }
 }
 

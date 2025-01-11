@@ -57,7 +57,7 @@ a:hover {
   color: rgb(0, 200, 0);  
 }
 
-.section {
+.section {  
   padding: 0.5em;   
   text-align: center;    
 }
@@ -119,21 +119,26 @@ a:hover {
 /* Skills */
 .skills-ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, min-max(220px, 1fr));  
-  grid-template-rows: auto;
-  grid-auto-flow: dense;
-  grid-gap: 0.5em;
+  /* max-width: 547px; */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+  /* grid-auto-rows: 4em;   small screen */
+  justify-content: space-evenly;
+  grid-gap: 0.5em;  
+  justify-items: center;
 }
 
-
-.skills-item {
-  grid-column: 1 / -1;
-  max-width: 32px;
+.skills-ul img {  
+  width: 32px;
 }
 
+ .skills-p {  
+  font-size: 0.5em;
+  font-style: italic;
+}
 
 /* Connect */
 .connect-ul {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
