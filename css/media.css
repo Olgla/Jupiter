@@ -52,13 +52,13 @@
     display: flex;        
     justify-content: center;    
     flex-direction: row;    
-    padding: 0 10px;
+    padding: 0 0.5em;
     flex-grow: 0.5;
     gap: 5%
   }
   
   .hrd-menu-itm {
-    padding: 0 10px;
+    padding: 0 0.5em;
     /* margin: 0 16px; */
   }
 
@@ -66,8 +66,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    gap: 16px;
-    padding: 0 32px;    
+    gap: 1em;
+    padding: 0 2em;    
     margin-bottom: 3vh; /*3% of view port height*/
   }
     

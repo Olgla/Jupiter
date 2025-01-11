@@ -16,12 +16,21 @@ footer.style.padding = `${headerHeight / 3}px`;
 
 body.appendChild(footer);
 
-const skills = ['HTML', 'CSS', 'JavaScript', 'React','API fetch', 'Postman', 'Node.js', 'Figma'];
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Postman', 'NodeJS', 'Figma'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.querySelector('ul');
 
 skills.forEach(skill => {
-    const li = document.createElement('li');
-    li.innerText = skill; 
-    skillsList.append(skill);     
+    let skillsItem = document.createElement('li');    
+    let skillImage = document.createElement('img');
+
+    skillImage.src = `./images/${skill.toLowerCase()}.svg`;
+    skillImage.alt = `${skill} icon`;
+
+    skillsItem.innerText = skill;   
+    console.log(skillsItem);      
+    skillsItem.className = 'skills-item';
+
+    skillsItem.append(skillImage);
+    skillsList.append(skillsItem);
 });
