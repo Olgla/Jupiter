@@ -3,11 +3,17 @@ const body = document.querySelector('body');
 const footer = document.createElement('footer');
 const year = new Date().getFullYear();
 
-footer.innerText = `Olena Gladenko \u00A9 ${year}`;
+footer.innerText = `O. Gladenko \u00A9 ${year}`;
 
-document.querySelector("#footer");
+document.querySelector('#footer');
 footer.style.textAlign = 'center';
 footer.style.backgroundColor = '#282828e6';
+footer.style.marginTop = '1em';
+footer.style.fontStyle = 'italic';
+footer.style.fontSize = '80%';
+
+// MULTIPLE FORMAT DOESN'T WORK??
+// footer.style.cssText = "textAlign: center; backgroundColor: 282828e6;";
 
 const header = document.querySelector('header');
 const headerHeight = header.offsetHeight;
@@ -15,7 +21,10 @@ const headerHeight = header.offsetHeight;
 footer.style.height = `${headerHeight}px`;
 footer.style.padding = `${headerHeight / 3}px`; 
 
+
 body.appendChild(footer);
+
+// ============SKILLS====================== //
 
 const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Figma', 'NodeJS', 'Postman'];
 const skillsSection = document.getElementById('skills');
