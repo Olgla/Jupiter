@@ -13,29 +13,37 @@
         </head>
         <body>
             <header id="header" class="sticky-header">                
-                    <nav class="header-nav">                        
-                        <a href="./index.html"><img src="./images/dark-icon-smm.svg" alt="Olena's logo"></a>                            
-                        <ul class="header-menu">                                
-                            <li class="exp-li
-                            "><a href="#about">About</a></li class="exp-li
-                                ">
-                            <li class="exp-li
-                            "><a href="#experience">Experience</a></li class="exp-li
-                                ">
-                            <li class="exp-li
-                            "><a href="#skills">Skills</a></li class="exp-li
-                                ">
-                            <li class="exp-li
-                            "><a href="#projects">Projects</a></li class="exp-li
-                                ">
-                            <li class="exp-li
-                            "><a href="#connect">Connect</a></li class="exp-li
-                                ">
-                            </ul>                        
-                        <button class="button" type="button"><svg width="24" height="24">
-                            <use href="./images/icons.svg#icon-menu"></use>
-                          </svg></button>
-                    </nav>                                
+                <nav class="header-nav">                        
+                    <a href="./index.html"><img src="./images/dark-icon-smm.svg" alt="Olena's logo"></a>                            
+                    <ul class="header-menu">                                
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#connect">Connect</a></li>
+                    </ul>
+                </nav>                        
+                <button class="hdr-menu-btn-open" type="button">
+                    <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                      
+                <div class="mobile-menu">
+                    <button class="mobile-menu__btn-close menu-btn-close" type="button">
+                        <svg width="24" height="24">
+                        <use href="./images/icons.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                        
+                    <ul class="mbl-menu-ul">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#connect">Connect</a></li>
+                    </ul>
+                </div>                                                    
             </header>
 
             <main>
@@ -56,18 +64,12 @@
                     <h2>Experience</h2>
                     
                     <ul class="exp-ul">
-                        <li class="exp-li
-                        ">Software Developer <span class="years">2/2023 - Present</span>
-                            <p>Some description</p></li class="exp-li
-                            ">
-                        <li class="exp-li
-                        ">Software QA Engineer 2/2020 - 2/2023
-                            <p>Some description</p></li class="exp-li
-                            ">
-                        <li class="exp-li
-                        ">Air Traffic Controller 6/2009 - 2/2020
-                            <p>Some description</p></li class="exp-li
-                            ">
+                        <li class="exp-li">Software Developer 2/2023 - Present
+                            <p>Some description</p></li>
+                        <li class="exp-li">Software QA Engineer 2/2020 - 2/2023
+                            <p>Some description</p></li>
+                        <li class="exp-li">Air Traffic Controller 6/2009 - 2/2020
+                            <p>Some description</p></li>
                     </ul>
                 </section>
 
@@ -87,6 +89,23 @@
                         <li><a href="https://github.com/Olgla" target="_blank" rel="noopener noreferrer"><img src="./images/github-mark-white.svg"></a></li>
                         <li><a href="https://www.linkedin.com/in/olena-gladenko/" target="_blank" rel="noopener noreferrer"><img src="./images/In-Blue-34@2x.png"></a></li>
                     </ul>
+                </section>
+
+                <section id="send-msg" class="section">
+                    <h2>Leave a Message</h2>                    
+                    <form name="leave_message" autocomplete="off" novalidate>
+                        <label for="user-name">Your Name<span class="asterix">*</span></label>
+                        <input type="text" id="user-name" name="userName" required="true"/>
+
+                        <label for="user-email">Email<span class="asterix">*</span></label>
+                        <input type="email" id="user-email" name="userEmail" required="true"/>
+
+                        <label for="user-msg">Your message<span class="asterix">*</span><span class="remark">(will be shown on this page)</span></p>
+                        <textarea id="user-msg" name="userMessage" cols="30" rows="30" required="true">
+
+                        <button type="submit">Send</button>
+                        <p>* indicates requred field</p>
+                    </form>
                 </section>
 
             </main>                            

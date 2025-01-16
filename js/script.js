@@ -36,10 +36,9 @@ skills.forEach(skill => {
 
     skillImage.src = `./images/${skill.toLowerCase()}.svg`;
     skillImage.alt = `${skill} icon`;
-
-    skillsItem.innerText = skill;   
-         
-    skillsItem.className = 'skills-item';
+    
+    skillsItem.innerText = skill;            
+    skillsItem.classList.toggle('skills-item'); 
     
     skillsItem.append(skillImage);
     skillsList.append(skillsItem);

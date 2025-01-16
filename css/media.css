@@ -29,10 +29,6 @@
   src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
   }
 
-@media (max-width: 479px) {
-
-}
-
 
 @media (min-width: 480px) {
   img {      
@@ -61,10 +57,9 @@
     flex-grow: 0.5;
     gap: 5%
   }
-  
-  .hrd-menu-itm {
-    padding: 0 0.5em;
-    /* margin: 0 16px; */
+
+  .mobile-menu {
+    display: none;
   }
 
   .about {    
@@ -139,8 +134,8 @@
 }
 
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .footer {
     height: auto;
   }
-}
+} */
