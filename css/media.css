@@ -29,6 +29,7 @@
   src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2'); 
   }
 
+
 @media (min-width: 480px) {
   img {      
     max-width: 100%;
@@ -52,22 +53,21 @@
     display: flex;        
     justify-content: center;    
     flex-direction: row;    
-    padding: 0 10px;
+    padding: 0 0.5em;
     flex-grow: 0.5;
     gap: 5%
   }
-  
-  .hrd-menu-itm {
-    padding: 0 10px;
-    /* margin: 0 16px; */
+
+  .mobile-menu {
+    display: none;
   }
 
   .about {    
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
-    gap: 16px;
-    padding: 0 32px;    
+    gap: 1em;
+    padding: 0 2em;    
     margin-bottom: 3vh; /*3% of view port height*/
   }
     
@@ -86,9 +86,19 @@
   }
 }
 
+@media (min-width: 547px) {
+  .skills-ul {
+    margin: 0 2em;
+  }
+}
+
 @media (min-width: 720px) {
   body {    
     font-size: 120%;
+  }
+
+  .skills-ul {
+    margin: 0 3em;
   }
 
   .about {                /**/
@@ -104,6 +114,25 @@
     max-width: 460px;
   }
 }
+
+@media (min-width: 780px) {
+  .skills-ul {
+    margin: 0 4em;
+  }
+}
+
+@media (min-width: 860px) {
+  .skills-ul {
+    margin: 0 5em;
+  }
+}
+
+@media (min-width: 960px) {
+  .skills-ul {
+    margin: 0 5em;
+  }
+}
+
 
 /* @media (max-width: 480px) {
   .footer {
