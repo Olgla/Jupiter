@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="EN">
         <head>
             <title>Olena Gladenko - Web developer portfolio</title>
             <meta charset="UTF-8">
@@ -75,18 +75,18 @@
                         <fieldset>
                             <legend>* Required fields</legend>
                             <div class="form-field">
-                                <label for="userName" class="form-label">Your Name</label>
-                                <input class="form-input" type="text" id="userName" name="userName" required="true"/>
+                                <label for="userName" class="form-label visually-hidden">Your Name</label>
+                                <input class="form-input" type="text" id="userName" required name="userName" placeholder="Yor name"/>
                             </div>
                             
                             <div class="form-field">
-                                <label for="userEmail" class="form-label">Email</label>
-                                <input class="form-input" type="email" id="userEmail" name="userEmail" required="true"/>
+                                <label for="userEmail" class="form-label visually-hidden">Email</label>
+                                <input class="form-input" type="email" id="userEmail" name="userEmail" placeholder="Your email" required/>
                             </div>
                             
                             <div class="form-field last">
-                                <label for="userMessage" class="form-label">Your message</label>
-                                <textarea class="form-input" id="userMessage" name="userMessage" required="true"></textarea>
+                                <label for="userMessage" class="form-label visually-hidden">Your message</label>
+                                <textarea class="form-input" id="userMessage" name="userMessage" placeholder="Enter your message" required></textarea>
                             </div>
                             <p class="remark">(will be shown on this page)</p>
                             <button class="submit" type="submit">Send</button>
@@ -98,7 +98,7 @@
                 </section>
 
                 <section id="messages" class="section">
-                    <h2>Messages</h2>
+                    <h2 class="is-hidden">Messages</h2>
                     <ul></ul>
                 </section>
 

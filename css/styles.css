@@ -48,6 +48,12 @@ h1, h2 {
   overflow: hidden;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 a:link {
   text-decoration: none;
   color: white;
