@@ -76,17 +76,17 @@
                             <legend>Required fields</legend>
                             <div class="form-field">
                                 <label for="userName" class="form-label visually-hidden">Your Name</label>
-                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required/>
+                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required minlength="1" maxlength="24" pattern="[A-Za-z]"/>
                             </div>
                             
                             <div class="form-field">
                                 <label for="userEmail" class="form-label visually-hidden">Email</label>
-                                <input class="form-input" type="email" id="userEmail" name="userEmail" placeholder="Your email" autocomplete="email" required/>
+                                <input class="form-input" type="email" id="userEmail" name="userEmail" placeholder="Your email" autocomplete="email" required minlength="5" maxlength="56" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"/>
                             </div>
                             
                             <div class="form-field last">
                                 <label for="userMessage" class="form-label visually-hidden">Your message</label>
-                                <textarea class="form-input" id="userMessage" name="userMessage" placeholder="Enter your message" autocomplete="off" required></textarea>
+                                <textarea class="form-input" id="userMessage" name="userMessage" placeholder="Enter your message" autocomplete="off" required maxlength="256" pattern="^[A-Za-z0-9\s.,!?'-]+$"></textarea>
                             </div>
                             <p class="remark">(will be shown on this page)</p>
                             <button class="submit" type="submit">Send</button>

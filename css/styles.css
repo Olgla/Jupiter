@@ -203,6 +203,10 @@ fieldset {
   padding: 0.5em 1em;
 }
 
+.submit:disabled {
+  cursor: not-allowed;
+}
+
 /* ======== MESSAGES ========= */
 .msg-list {
   align-items: center;

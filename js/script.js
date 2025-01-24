@@ -52,22 +52,6 @@ skills.forEach(skill => {
     
     skillsSection.appendChild(iconSourceP);
 
-
-// ====== will need to support innerHTML ========= //
-// function validateMessage(inputValue, inputType) {
-//     if (inputType === "name") {
-//         const regex = /^[A-Za-z\s]+$/;
-//         return regex.test(inputValue);
-//     } else if (inputType === "email") {
-//         const regex = /[a-zA-Z0-9+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$/;
-//         return regex.test(inputValue);        
-//     } else if (inputType === "message") {
-//         const regex = /^[A-Za-z0-9\s.,!?'"-]+$/;
-//         return regex.test(inputValue);
-//     } else {
-//         return false; 
-//     }
-// }
 // ======= and add to eventListener: =============== //
 
 // if (!validateMessage(name.value, "name")) {
