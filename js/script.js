@@ -70,6 +70,7 @@ skills.forEach(skill => {
 const messageForm = document.forms['leave_message'];
 const messageSection = document.getElementById('messages');
 const messageList = messageSection.querySelector('ul');
+const messagesHeader = messageSection.querySelector('h2');
 
 messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
     //returnedBrowserEventObject, usually === "event" / "e" //
@@ -85,22 +86,26 @@ messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
 
 // ========= REMOVE BUTTON ========= //   
     const removeButton = document.createElement('button');
-    removeButton.innerText = 'remove';
+    removeButton.innerText = "Remove";
     removeButton.type = 'button';
+    removeButton.classList.toggle('remove-btn');
+    removeButton.classList.toggle('ylw-btn');
 
     removeButton.addEventListener('click', (e) => {
         const entry = removeButton.parentNode;
         entry.remove();
 
         if (messageList.childElementCount === 0) {
-            messageSection.style.display = "none";            
+            messageSection.classList.toggle('hidden');            
         };
     });
     
     // ============ EDIT BUTTON ========== //
     const editButton = document.createElement('button');
-    editButton.innerText = 'edit';
+    editButton.innerText = "Edit";
     editButton.type = 'button';
+    editButton.classList.toggle('edit-btn');
+    editButton.classList.toggle('ylw-btn');
 
     editButton.addEventListener('click', (e) => {
         const updatedMessage = prompt('New message');
@@ -111,7 +116,31 @@ messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
     newMessage.appendChild(removeButton);
     newMessage.appendChild(editButton);
     messageList.appendChild(newMessage);
-    messageSection.style.display = "block";
+    
+    messageSection.classList.toggle('hidden');
+    messagesHeader.setAttribute('tabindex', '0');
 
     messageForm.reset();
 })
+
+// ======== PROJECTS API =========== //
+const projectsSection = document.getElementById('projects');
+const projectList = projectsSection.querySelector('ul');
+projectList.classList.toggle('proj-list');
+const projectsLink = document.querySelector('.navbar li.hidden');
+const projectsHeader = projectsSection.querySelector('h2');
+
+fetch("https://api.github.com/users/olgla/repos")
+.then(response => response.json())   
+.then(repos => {  
+    repos.forEach(repo => {        
+        const projItem = `<li><a href = "${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></li>`;        
+        projectList.insertAdjacentHTML("beforeend", projItem);               
+    });
+    projectsLink.classList.toggle('hidden');
+    projectsSection.classList.toggle('hidden');
+    projectsHeader.setAttribute('tabindex', '0');
+})
+.catch(error => {    
+    console.log(error);
+});
