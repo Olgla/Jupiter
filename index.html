@@ -23,7 +23,8 @@
                     <li><a href="#connect">Connect</a></li>
                     <li><a href="#leave-message">Leave Message</a></li>                        
                 </ul>   
-                <button type="button" class="menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-menu"></use></svg></button>                
+                <button type="button" class="menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-menu"></use></svg></button> 
+                <button type="button" class="theme"></button>              
             </header>                                    
                 
             <main id="main">
@@ -36,7 +37,7 @@
                     <h2 class="visually-hidden">About</h2>
                     <div class="about">
                         <img class="photo" src="./images/img.png" alt="Olena Gladenko's photo"/>
-                        <p class="hero-p">Software developer with QA and BA experience Software developer with QA and BA experience Software developer with QA and BA experience Software developer with QA and BA experience</p>
+                        <p class="hero-p">Software developer with QA and BA experience</p>
                     </div>                
                 </section>
 
@@ -81,7 +82,7 @@
                             <legend>Required fields</legend>
                             <div class="form-field">
                                 <label for="userName" class="form-label visually-hidden">Your Name</label>
-                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required minlength="1" maxlength="24" pattern="[A-Za-z]+"/>
+                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required minlength="1" maxlength="24" pattern="^[A-Za-z\s]+"/>
                             </div>
                             
                             <div class="form-field">

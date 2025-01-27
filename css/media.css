@@ -43,12 +43,30 @@
     object-fit: cover;
   }
 
+  /* .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    list-style-type: none;
+    padding: 0 1em;
+  } */
+
   .header {     
     max-width: 100%;
-    position: sticky;        
+    position: sticky;         
     display: flex;        
     justify-content: center;
-    align-items: center;    
+    align-items: center;  
+    background-color: #282828e6;  
     }
  
   .logo {
@@ -61,7 +79,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.5em;
+    gap: 1em;
     padding: 0 1em;
   }
 
