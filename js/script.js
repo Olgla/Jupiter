@@ -1,6 +1,23 @@
 'use strict';
+// =========== MENU ================ //
+const menuButton = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
 
-//=========== FOOTER =============== //
+menuButton.addEventListener('click', () => {
+    navbar.style.display = '';
+    navbar.classList.toggle('hidden');
+});
+
+console.log(window.getComputedStyle(navbar).display);
+
+if(window.getComputedStyle(navbar).display !== 'none') {
+    menuButton.style.zIndex = "1000"; 
+}
+
+
+
+
+// =========== FOOTER =============== //
 const body = document.querySelector('body');
 const footer = document.createElement('footer');
 const year = new Date().getFullYear();

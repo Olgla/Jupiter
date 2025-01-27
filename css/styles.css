@@ -43,6 +43,7 @@ h1, h2, h3, p {  /*word wrappin without hyphens (hyphens: auto;) */
 
 h1, h2 {
   text-align: center;  
+  position: relative;
 }
 
 .visually-hidden {
@@ -55,7 +56,9 @@ h1, h2 {
 }
 
 .hidden {
-  display: none;
+  display: none ;  
+  visibility: hidden;       
+  opacity: 0; 
 }
 
 a:link {
@@ -76,24 +79,29 @@ a:hover {
 }
 
 /* ======== HEADER ========= */
-.header {  
-  background-color: #282828e6; /*0.9 - opacity*/
-  max-width: fit-content;
-  position: absolute;
-  padding: 1em;
-  border-radius: 4px;  
-  top: 0;
-  right: 0;
-  display: flex;
-  align-items: flex-start;
+.header { 
+  position: sticky;
+  top: 0;      
+  z-index: 1000; 
+  background-color: #282828e6; /*0.9 - opacity*/   
+  padding: 0 1em;  
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
   gap: 0.5em;
   }
 
 .navbar {
+  position: absolute;  
+  top: 0;
+  right: 0;
+  background-color: #282828e6;
   display: flex;
   flex-direction: column;
   gap: 0.5em;  
-  margin: 0;
+  margin: 0;  
+  align-items: flex-start;
+  padding: 2em;
 }
 
 .navbar li {
@@ -101,8 +109,18 @@ a:hover {
 }
 
 .logo {
-  max-width: 70%;
-  margin: 0 auto;
+  display: block;
+  max-width: 50%;
+  padding: 0.5em 0;      
+  margin: auto 0.5em;
+}
+
+.menu-btn {   
+  background-color: transparent;  
+  margin: 0 1em;
+  height: 24px;   
+  border: none;
+  fill: white;
 }
 
 /* ======== ABOUT ========== */
@@ -111,6 +129,18 @@ a:hover {
   font-weight: 700;
   
 } 
+
+/* .hero-name {
+  position: relative;
+} */
+
+h1::after, h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 100%;
+  border: 1px solid #00c800;  
+}
 
 .about {
   display: flex;
