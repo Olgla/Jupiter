@@ -8,6 +8,7 @@ html {
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  /* border: 1px solid pink; */
 }
 
 body {
@@ -16,6 +17,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;  
   margin: 0;
   -webkit-font-smoothing: antialiased; /*font smoothing*/ 
+}
+
+.main-div {
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 img {
@@ -37,6 +43,7 @@ h1, h2, h3, p {  /*word wrappin without hyphens (hyphens: auto;) */
 
 h1, h2 {
   text-align: center;  
+  position: relative;
 }
 
 .visually-hidden {
@@ -49,7 +56,9 @@ h1, h2 {
 }
 
 .hidden {
-  display: none;
+  display: none ;  
+  visibility: hidden;       
+  opacity: 0; 
 }
 
 a:link {
@@ -65,29 +74,69 @@ a:hover {
   color: #00c800;  
 }
 
-.section {  
-  padding: 0.5em;   
-  text-align: center;    
+.section {      
+  text-align: center; 
+  margin: 5vh auto;   
 }
 
 /* ======== HEADER ========= */
-.header {  
-  background-color: #282828e6; /*0.9 - opacity*/   
+.header { 
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  padding: 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
   }
 
-.hero {
-  margin: 10vh auto;
-  font-weight: 700;
-  
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #282828e6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 0;
+  align-items: flex-start;
+  padding: 1em;
 }
 
-.hero-name {
-  margin: 0 10%;
-  border: 2px solid green;
-  /* -webkit-text-stroke: 2px #03fb0f; */
+.logo {
+  display: block;
+  max-width: 40%;
+  padding: 0.5em 0;      
+  margin: auto 0.5em;
+}
+
+.menu-btn {   
+  background-color: transparent;  
+  margin: 0 1em;
+  height: 24px;   
+  border: none;
+  fill: white;
 }
 
 /* ======== ABOUT ========== */
+.hero {
+  position: relative;  
+  font-weight: 700;
+  
+} 
+
+h1::after, h2::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 50%;
+  left: 25%;
+  border: 1px solid #00c800;  
+  margin-top: 2px;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -102,20 +151,34 @@ a:hover {
 
 /* ======== EXPERIENCE =========*/
 .exp-ul {
-  display: flex;
-  justify-content: center;   
-  flex-wrap: wrap;
+  padding: 0 1em;
+  margin: 0 auto;
+  text-align: left;
+  display: grid;
   align-content: center;
   gap: 1em;
   align-items: center; 
 }
 
+.exp-li {
+  margin-bottom: 0.5em;
+} 
+
+.exp-ul span {
+  float: right;
+}
+
+.exp-description {
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 0.2em;
+  font-size: 80%;
+}
 
 /* ======= SKILLS ======== */
 .skills-ul {
   display: grid;  
-  margin: 0 auto;
-  padding: 0 10%;
+  margin: 0 auto;  
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
   grid-auto-rows: 4em;  
   justify-content: space-evenly;
@@ -137,6 +200,16 @@ a:hover {
  .skills-p {  
   font-size: 0.5em;
   font-style: italic;
+}
+
+/* ======= PROJECTS ====== */
+.proj-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;      
 }
 
 /* ======== CONNECT ======= */
@@ -168,10 +241,8 @@ a:hover {
 }
 
 fieldset {
-  border-color: #00c800;
-  width: 100%;
+  border: 1px solid #00c800;
 }
-
 .form-label {
   display: block;
 }
@@ -190,6 +261,8 @@ fieldset {
   border-radius: 3px;
   background-color: transparent;
   color: white;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .remark {
@@ -198,13 +271,28 @@ fieldset {
   margin: 0 auto;
 }
 
-.submit {
+/* .submit:disabled {
+  cursor: not-allowed;
+} */
+
+fieldset {
+  border: none;
+}
+/* ========= BUTTONS ============ */
+.ylw-btn {
+  font-size: 80%;
+  color: white;
   margin-top: 1em;
   padding: 0.5em 1em;
+  background-color: #a9a923;
+  border-radius: 8px;  
+  border: 1px solid #e1e1e1;
 }
 
-.submit:disabled {
-  cursor: not-allowed;
+.ylw-btn:hover {
+  background-color: #818119;
+  /* border-color: #959393; */
+  border: 1px solid #a3a0a0;
 }
 
 /* ======== MESSAGES ========= */
@@ -224,11 +312,17 @@ fieldset {
   flex-direction: row;
 }
 
-#messages button {
-  padding: 0 1em;
-  margin: 0.5em;
+.edit-btn, .remove-btn {
+  padding: 0.2em 1em;
+  margin: 0 0.5em; 
 }
 
 #messages span {
   padding: 0 1em;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+  fill: black;
 }

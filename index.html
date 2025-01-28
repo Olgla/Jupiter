@@ -14,69 +14,75 @@
         <body>
             <header id="header" class="header">             
                 <a href="./index.html"><img class="logo" src="./images/dark-icon-smm.svg" alt="Olena's logo"></a>                                        
-                <ul class="navbar">                                                        
+                <ul class="navbar hidden">     
+                    <li class="visually-hidden"><a href="#main">Main Content</a></li>                                                   
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li class="hidden"><a href="#projects">Projects</a></li>
                     <li><a href="#connect">Connect</a></li>
                     <li><a href="#leave-message">Leave Message</a></li>                        
-                </ul>                   
+                </ul>   
+                <button type="button" class="menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-menu"></use></svg></button> 
+                <button type="button" class="theme"></button>              
             </header>                                    
                 
-            <main>
-                <section id="hero" class="hero">
+            <main id="main">
+                <div class="main-div">
+                <section id="hero" class="hero" tabindex="0">
                     <h1 class="hero-name">Olena Gladenko</h1>
                 </section>                
 
-                <section id="about" class="section">
+                <section id="about" class="section" tabindex="0">
                     <h2 class="visually-hidden">About</h2>
                     <div class="about">
                         <img class="photo" src="./images/img.png" alt="Olena Gladenko's photo"/>
-                        <p class="hero-p">Software developer with QA and BA experience Software developer with QA and BA experience Software developer with QA and BA experience Software developer with QA and BA experience</p>
+                        <p class="hero-p">Software developer with QA and BA experience</p>
                     </div>                
                 </section>
 
             
-                <section id="experience" class="section">
+                <section id="experience" class="section" tabindex="0">
                     <h2>Experience</h2>
                     
                     <ul class="exp-ul">
-                        <li class="exp-li">Software Developer 2/2023 - Present
-                            <p>Some description</p></li>
-                        <li class="exp-li">Software QA Engineer 2/2020 - 2/2023
-                            <p>Some description</p></li>
-                        <li class="exp-li">Air Traffic Controller 6/2009 - 2/2020
-                            <p>Some description</p></li>
+                        <li class="exp-li">Software Developer <span>2/2023 - Present</span>
+                            <p class="exp-description">Develop accessible and responsive web pages.</p></li>
+                        <li class="exp-li">Software QA Engineer <span>2/2020 - 2/2023</span>
+                            <p class="exp-description">Assured software products met the requirements</p></li>
+                        <li class="exp-li">Air Traffic Controller <span>6/2009 - 2/2020</span>
+                            <p class="exp-description">Provided safety airspace between aircraft</p></li>
                     </ul>
                 </section>
 
-                <section id="skills" class="section">
+                <section id="skills" class="section" tabindex="0">
                     <h2>Skills</h2>
                     <ul class="skills-ul"></ul>                    
                 </section>
 
-                <section id="projects" class="section">
+                <section id="projects" class="section hidden" >
                     <h2>Projects</h2>
-                    <ul></ul>
+                    <ul>
+                        <li class="visually-hidden"><a href="#connect">Skip projects links</a></li>
+                    </ul>
                 </section>
             
-                <section id="connect" class="section">
+                <section id="connect" class="section" tabindex="0">
                     <h2>Connect</h2>
                     <ul class="connect-ul">
-                        <li><a href="https://github.com/Olgla" target="_blank" rel="noopener noreferrer"><img src="./images/github-mark-white.svg"></a></li>
-                        <li><a href="https://www.linkedin.com/in/olena-gladenko/" target="_blank" rel="noopener noreferrer"><img src="./images/In-Blue-34@2x.png"></a></li>
+                        <li><a href="https://github.com/Olgla" aria-label="Visit Olena's github profile page" target="_blank" rel="noopener noreferrer"><img src="./images/github-mark-white.svg" alt="github icon"></a></li>
+                        <li><a href="https://www.linkedin.com/in/olena-gladenko/" area-label="Visit Olena's linkedin profile page" target="_blank" rel="noopener noreferrer"><img src="./images/In-Blue-34@2x.png" alt="linkedin icon"></a></li>
                     </ul>
                 </section>
 
-                <section id="leave-message" class="section">
+                <section id="leave-message" class="section" tabindex="0">
                     <h2>Leave a Message</h2>                    
                     <form name="leave_message" class="form" autocomplete="on">
                         <fieldset>
                             <legend>Required fields</legend>
                             <div class="form-field">
                                 <label for="userName" class="form-label visually-hidden">Your Name</label>
-                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required minlength="1" maxlength="24" pattern="[A-Za-z]"/>
+                                <input class="form-input" type="text" id="userName" name="userName" placeholder="Yor name" autocomplete="name" required minlength="1" maxlength="24" pattern="^[A-Za-z\s]+"/>
                             </div>
                             
                             <div class="form-field">
@@ -89,7 +95,7 @@
                                 <textarea class="form-input" id="userMessage" name="userMessage" placeholder="Enter your message" autocomplete="off" required maxlength="256" pattern="^[A-Za-z0-9\s.,!?'-]+$"></textarea>
                             </div>
                             <p class="remark">(will be shown on this page)</p>
-                            <button class="submit" type="submit">Send</button>
+                            <button class="submit ylw-btn" type="submit">Send</button>
                         </fieldset>                            
                     </form>
                 </section>
@@ -98,6 +104,7 @@
                     <h2>Messages</h2>
                     <ul></ul>
                 </section>
+            </div>
             </main>                            
             <!-- <script src="js/script.js"></script> -->
         </body>
