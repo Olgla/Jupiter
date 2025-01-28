@@ -151,6 +151,7 @@ fetch("https://api.github.com/users/olgla/repos")
 // ============ THEME ============== //
 const themeButton = document.querySelector('.theme');
 const themeImg = themeButton.querySelector('img');
+const githubImg = document.querySelector('#connect img[alt="github icon"]');
 
 themeButton.addEventListener('click', () => {
     body.classList.toggle('light-mode');
@@ -158,8 +159,14 @@ themeButton.addEventListener('click', () => {
 
     if (document.body.classList.contains('light-mode')) {
         themeImg.setAttribute('src', "./images/Moon.svg");
+        themeImg.setAttribute('aria-label', "dark-theme-toggle");
+        githubImg.setAttribute('src', "./images/github-mark.svg");
+        document.documentElement.style.setProperty("--color-link", "#000000");
       } else {
         themeImg.setAttribute('src', "./images/Sun.svg");
+        themeImg.setAttribute('aria-label', "light-theme-toggle");
+        githubImg.setAttribute('src', "./images/github-mark-white.svg");
+        document.documentElement.style.setProperty("--color-link", "#ffffff");
     };
 
     const inputs = document.getElementsByClassName('form-input');
@@ -167,7 +174,7 @@ themeButton.addEventListener('click', () => {
 
     const projectItemsCollection = document.querySelectorAll('.proj-item a');
     const projectItems = Array.from(projectItemsCollection);
-    console.log(projectItems);
+    
     projectItems.forEach(projItem => projItem.classList.toggle('light-mode-proj'));
 });
 
