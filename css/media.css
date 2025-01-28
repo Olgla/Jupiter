@@ -65,6 +65,7 @@
     align-items: center;
     gap: 1em;
     padding: 0 0.5em;
+    background-color: transparent;
   }
 
   .menu-btn {

@@ -340,6 +340,10 @@ fieldset {
   fill: black;   
 }
 
+.fill {
+  fill: black;
+}
+
 .proj-item a:hover {
   color: #00c800;  
 }
@@ -351,4 +355,8 @@ fieldset {
 
 .light-mode-proj {
   color: black;
+}
+
+.light-li {
+  color: white !important;
 }

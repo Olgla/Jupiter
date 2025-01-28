@@ -153,20 +153,26 @@ const themeButton = document.querySelector('.theme');
 const themeImg = themeButton.querySelector('img');
 const githubImg = document.querySelector('#connect img[alt="github icon"]');
 
-themeButton.addEventListener('click', () => {
+themeButton.addEventListener('click', () => {    
     body.classList.toggle('light-mode');
     footer.style.color = '#ffffff';
+    menuButton.classList.toggle('fill');
+
+    const navbarLinks = document.querySelectorAll('header .navbar > li > a');
+    navbarLinks.forEach(link => {
+        link.classList.toggle('light-li');
+});
 
     if (document.body.classList.contains('light-mode')) {
         themeImg.setAttribute('src', "./images/Moon.svg");
         themeImg.setAttribute('aria-label', "dark-theme-toggle");
         githubImg.setAttribute('src', "./images/github-mark.svg");
-        document.documentElement.style.setProperty("--color-link", "#000000");
+        document.documentElement.style.setProperty("--color-link", "#000000");         
       } else {
         themeImg.setAttribute('src', "./images/Sun.svg");
         themeImg.setAttribute('aria-label', "light-theme-toggle");
         githubImg.setAttribute('src', "./images/github-mark-white.svg");
-        document.documentElement.style.setProperty("--color-link", "#ffffff");
+        document.documentElement.style.setProperty("--color-link", "#ffffff");        
     };
 
     const inputs = document.getElementsByClassName('form-input');
