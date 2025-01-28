@@ -6,15 +6,13 @@ const navbar = document.querySelector('.navbar');
 menuButton.addEventListener('click', () => {
     navbar.style.display = '';
     navbar.classList.toggle('hidden');
+    navbar.setAttribute('tabindex', '0');
 });
 
-console.log(window.getComputedStyle(navbar).display);
 
 if(window.getComputedStyle(navbar).display !== 'none') {
-    menuButton.style.zIndex = "1000"; 
+    menuButton.style.zIndex = "1000";     
 }
-
-
 
 
 // =========== FOOTER =============== //
@@ -69,19 +67,6 @@ skills.forEach(skill => {
     
     skillsSection.appendChild(iconSourceP);
 
-// ======= and add to eventListener: =============== //
-
-// if (!validateMessage(name.value, "name")) {
-//     alert('Name can only contain letters and spaces');
-//     e.preventDefault();
-// } else if (!validateMessage(email.value, "email")) {
-//     alert('Please enter a valid email address');
-//     e.preventDefault();
-// } else if (!validateMessage(message.value, "message")) {
-//     alert('Message contains invalid characters');
-//     e.preventDefault();
-// }
-
 
 // ========== LEAVE MESSAGE =================== //
 const messageForm = document.forms['leave_message'];
@@ -89,13 +74,13 @@ const messageSection = document.getElementById('messages');
 const messageList = messageSection.querySelector('ul');
 const messagesHeader = messageSection.querySelector('h2');
 
-messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
-    //returnedBrowserEventObject, usually === "event" / "e" //
-    returnedBrowserEventObject.preventDefault();
+messageForm.addEventListener('submit', (event) => {
+    //event, e -returned object by browser
+    event.preventDefault();
 
-    const name = returnedBrowserEventObject.target.userName.value;
-    const email = returnedBrowserEventObject.target.userEmail.value;
-    const message = returnedBrowserEventObject.target.userMessage.value; 
+    const name = event.target.userName.value;
+    const email = event.target.userEmail.value;
+    const message = event.target.userMessage.value; 
         
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href = "mailto:${email}">${name}: </a>
@@ -151,9 +136,10 @@ fetch("https://api.github.com/users/olgla/repos")
 .then(response => response.json())   
 .then(repos => {  
     repos.forEach(repo => {        
-        const projItem = `<li><a href = "${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></li>`;        
-        projectList.insertAdjacentHTML("beforeend", projItem);               
+        const projItem = `<li class="proj-item"><a href = "${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></li>`;        
+        projectList.insertAdjacentHTML("beforeend", projItem);                      
     });
+
     projectsLink.classList.toggle('hidden');
     projectsSection.classList.toggle('hidden');
     projectsHeader.setAttribute('tabindex', '0');
@@ -164,9 +150,40 @@ fetch("https://api.github.com/users/olgla/repos")
 
 // ============ THEME ============== //
 const themeButton = document.querySelector('.theme');
-const toggleTheme = () => body.classList.toggle('light-mode');
+const themeImg = themeButton.querySelector('img');
+const githubImg = document.querySelector('#connect img[alt="github icon"]');
 
-themeButton.addEventListener('click', toggleTheme());
+themeButton.addEventListener('click', () => {    
+    body.classList.toggle('light-mode');
+    footer.style.color = '#ffffff';
+    menuButton.classList.toggle('fill');
+
+    const navbarLinks = document.querySelectorAll('header .navbar > li > a');
+    navbarLinks.forEach(link => {
+        link.classList.toggle('light-li');
+});
+
+    if (document.body.classList.contains('light-mode')) {
+        themeImg.setAttribute('src', "./images/Moon.svg");
+        themeImg.setAttribute('aria-label', "dark-theme-toggle");
+        githubImg.setAttribute('src', "./images/github-mark.svg");
+        document.documentElement.style.setProperty("--color-link", "#000000");         
+      } else {
+        themeImg.setAttribute('src', "./images/Sun.svg");
+        themeImg.setAttribute('aria-label', "light-theme-toggle");
+        githubImg.setAttribute('src', "./images/github-mark-white.svg");
+        document.documentElement.style.setProperty("--color-link", "#ffffff");        
+    };
+
+    const inputs = document.getElementsByClassName('form-input');
+    (Array.from(inputs)).forEach(input => input.classList.toggle('light-input'));
+
+    const projectItemsCollection = document.querySelectorAll('.proj-item a');
+    const projectItems = Array.from(projectItemsCollection);
+    
+    projectItems.forEach(projItem => projItem.classList.toggle('light-mode-proj'));
+});
+
 
 // Edit message inside the form
 // const messageForm = document.forms['leave_message'];

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="66.214005mm"
+   height="62.355061mm"
+   viewBox="0 0 66.214005 62.355061"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4-beta2 (9aaf4f3498, 2024-07-30)"
+   sodipodi:docname="light-icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.66546717"
+     inkscape:cx="338.10834"
+     inkscape:cy="502.6544"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-15.524565,-15.308908)">
+    <ellipse
+       style="fill:#ffffff;fill-rule:evenodd;stroke:#ff0000;stroke-width:2.5;stroke-dasharray:none"
+       id="path6"
+       cx="48.631565"
+       cy="46.486439"
+       rx="31.857"
+       ry="29.92753" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:33.8667px;line-height:0;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:end;writing-mode:lr-tb;direction:ltr;text-anchor:end;fill:#000000;fill-opacity:1;stroke:#ff0000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
+       x="76.364532"
+       y="58.139774"
+       id="text6"><tspan
+         sodipodi:role="line"
+         id="tspan6"
+         style="font-size:33.8667px;fill:#000000;fill-opacity:1;stroke-width:0;stroke-dasharray:none"
+         x="76.364532"
+         y="58.139774">OG</tspan></text>
+  </g>
+</svg>

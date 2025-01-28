@@ -43,49 +43,43 @@
     object-fit: cover;
   }
 
-  /* .header {
+  .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    list-style-type: none;
-    padding: 0 1em;
-  } */
-
-  .header {     
     max-width: 100%;
-    position: sticky;         
-    display: flex;        
+    display: flex;
+    gap: 1em;
     justify-content: center;
-    align-items: center;  
-    background-color: #282828e6;  
-    }
- 
-  .logo {
-    width: 32px;
-    margin: 0 1em;
+    align-items: center;
+    background-color: #282828e6; 
+    padding: 0 0.5em;
   }
 
   .navbar {    
     position: static;
+    visibility: visible;
+    opacity: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1em;
-    padding: 0 1em;
+    padding: 0 0.5em;
+    background-color: transparent;
   }
 
-  /* .mobile-menu {
-    display: none;
-  } */
+  .menu-btn {
+    display: none ;  
+    visibility: hidden;       
+    opacity: 0;
+    margin: 0
+  }
+
+  .logo {
+    width: 32px;
+    max-width: 100%;
+    margin: 0 1em;
+  }
 
   .about {    
     flex-direction: row;
