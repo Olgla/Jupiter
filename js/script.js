@@ -158,17 +158,20 @@ fetch("https://api.github.com/users/olgla/repos")
     projectsSection.classList.toggle('hidden');
     projectsHeader.setAttribute('tabindex', '0');
 })
-.catch(error => {    
-    console.log(error);
-});
+.catch(error => console.log(error));
+
 
 // ============ THEME ============== //
 const themeButton = document.querySelector('.theme');
-const toggleTheme = () => body.classList.toggle('light-mode');
+themeButton.addEventListener('click', () => body.classList.toggle('light-mode'));
 
-themeButton.addEventListener('click', toggleTheme());
 
-// Edit message inside the form
+
+
+
+
+//============= Edit message inside the form ================ //
+
 // const messageForm = document.forms['leave_message'];
 // const messageSection = document.getElementById('messages');
 // const messageList = messageSection.querySelector('ul');
