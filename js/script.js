@@ -69,19 +69,6 @@ skills.forEach(skill => {
     
     skillsSection.appendChild(iconSourceP);
 
-// ======= and add to eventListener: =============== //
-
-// if (!validateMessage(name.value, "name")) {
-//     alert('Name can only contain letters and spaces');
-//     e.preventDefault();
-// } else if (!validateMessage(email.value, "email")) {
-//     alert('Please enter a valid email address');
-//     e.preventDefault();
-// } else if (!validateMessage(message.value, "message")) {
-//     alert('Message contains invalid characters');
-//     e.preventDefault();
-// }
-
 
 // ========== LEAVE MESSAGE =================== //
 const messageForm = document.forms['leave_message'];
@@ -89,13 +76,13 @@ const messageSection = document.getElementById('messages');
 const messageList = messageSection.querySelector('ul');
 const messagesHeader = messageSection.querySelector('h2');
 
-messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
-    //returnedBrowserEventObject, usually === "event" / "e" //
-    returnedBrowserEventObject.preventDefault();
+messageForm.addEventListener('submit', (event) => {
+    //event, e -returned object by browser
+    event.preventDefault();
 
-    const name = returnedBrowserEventObject.target.userName.value;
-    const email = returnedBrowserEventObject.target.userEmail.value;
-    const message = returnedBrowserEventObject.target.userMessage.value; 
+    const name = event.target.userName.value;
+    const email = event.target.userEmail.value;
+    const message = event.target.userMessage.value; 
         
     const newMessage = document.createElement('li');
     newMessage.innerHTML = `<a href = "mailto:${email}">${name}: </a>
@@ -164,9 +151,10 @@ fetch("https://api.github.com/users/olgla/repos")
 
 // ============ THEME ============== //
 const themeButton = document.querySelector('.theme');
-const toggleTheme = () => body.classList.toggle('light-mode');
 
-themeButton.addEventListener('click', toggleTheme());
+themeButton.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+});
 
 // Edit message inside the form
 // const messageForm = document.forms['leave_message'];
