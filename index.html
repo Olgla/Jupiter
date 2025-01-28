@@ -8,14 +8,16 @@
             <meta name="description" content="Portfolio page of Olena Gladenko">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <script src="js/script.js" defer></script>
+            <link rel="icon" type="image/x-icon" href="./images/dark-icon-smm.svg">
             <link rel="stylesheet" href="./css/styles.css"/>
             <link rel="stylesheet" href="./css/media.css"/>
         </head>
         <body>
             <header id="header" class="header">             
-                <a href="./index.html"><img class="logo" src="./images/dark-icon-smm.svg" alt="Olena's logo"></a>                                        
+                <a href="./index.html"><img class="logo" src="./images/dark-icon-smm.svg" alt="Olena's logo"/></a>
+                <button type="button" aria-label="menu" class="menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-menu"></use></svg></button>                                        
                 <ul class="navbar hidden">     
-                    <li class="visually-hidden"><a href="#main">Main Content</a></li>                                                   
+                    <li class="visually-hidden"><a href="#main">Skip to main content</a></li>                                                   
                     <li><a href="#about">About</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -23,10 +25,8 @@
                     <li><a href="#connect">Connect</a></li>
                     <li><a href="#leave-message">Leave Message</a></li>                        
                 </ul>   
-                <button type="button" class="menu-btn"><svg width="24" height="24"><use href="./images/icons.svg#icon-menu"></use></svg></button> 
-                <button type="button" class="theme"></button>              
             </header>                                    
-                
+            <button type="button" aria-label="light-theme-toggle" class="theme"><img src="./images/Sun.svg"/></button>    
             <main id="main">
                 <div class="main-div">
                 <section id="hero" class="hero" tabindex="0">
@@ -105,7 +105,7 @@
                     <ul></ul>
                 </section>
             </div>
-            </main>                            
+            </main>                    
             <!-- <script src="js/script.js"></script> -->
         </body>
     </html>

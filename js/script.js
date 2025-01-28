@@ -6,15 +6,13 @@ const navbar = document.querySelector('.navbar');
 menuButton.addEventListener('click', () => {
     navbar.style.display = '';
     navbar.classList.toggle('hidden');
+    navbar.setAttribute('tabindex', '0');
 });
 
-console.log(window.getComputedStyle(navbar).display);
 
 if(window.getComputedStyle(navbar).display !== 'none') {
-    menuButton.style.zIndex = "1000"; 
+    menuButton.style.zIndex = "1000";     
 }
-
-
 
 
 // =========== FOOTER =============== //
@@ -138,9 +136,10 @@ fetch("https://api.github.com/users/olgla/repos")
 .then(response => response.json())   
 .then(repos => {  
     repos.forEach(repo => {        
-        const projItem = `<li><a href = "${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></li>`;        
-        projectList.insertAdjacentHTML("beforeend", projItem);               
+        const projItem = `<li class="proj-item"><a href = "${repo.html_url}" target="_blank" rel="noopener noreferrer">${repo.name}</a></li>`;        
+        projectList.insertAdjacentHTML("beforeend", projItem);                      
     });
+
     projectsLink.classList.toggle('hidden');
     projectsSection.classList.toggle('hidden');
     projectsHeader.setAttribute('tabindex', '0');
@@ -151,10 +150,27 @@ fetch("https://api.github.com/users/olgla/repos")
 
 // ============ THEME ============== //
 const themeButton = document.querySelector('.theme');
+const themeImg = themeButton.querySelector('img');
 
 themeButton.addEventListener('click', () => {
     body.classList.toggle('light-mode');
+    footer.style.color = '#ffffff';
+
+    if (document.body.classList.contains('light-mode')) {
+        themeImg.setAttribute('src', "./images/Moon.svg");
+      } else {
+        themeImg.setAttribute('src', "./images/Sun.svg");
+    };
+
+    const inputs = document.getElementsByClassName('form-input');
+    (Array.from(inputs)).forEach(input => input.classList.toggle('light-input'));
+
+    const projectItemsCollection = document.querySelectorAll('.proj-item a');
+    const projectItems = Array.from(projectItemsCollection);
+    console.log(projectItems);
+    projectItems.forEach(projItem => projItem.classList.toggle('light-mode-proj'));
 });
+
 
 // Edit message inside the form
 // const messageForm = document.forms['leave_message'];
