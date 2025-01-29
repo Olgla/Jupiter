@@ -21,22 +21,15 @@ const footer = document.createElement('footer');
 const year = new Date().getFullYear();
 
 footer.innerText = `O. Gladenko \u00A9 ${year}`;
+footer.classList.toggle('footer');
 
-document.querySelector('#footer');
-footer.style.textAlign = 'center';
-footer.style.backgroundColor = '#282828e6';
-footer.style.marginTop = '1em';
-footer.style.fontStyle = 'italic';
-footer.style.fontSize = '80%';
 
-// multiple format doesn't work?
-// footer.style.cssText = "textAlign: center; backgroundColor: 282828e6;";
+// SETTING FOOTER HEIGHT SAME AS HEADER: //
+// const header = document.querySelector('header');
+// const headerHeight = header.offsetHeight;
 
-const header = document.querySelector('header');
-const headerHeight = header.offsetHeight;
-
-footer.style.height = `${headerHeight}px`;
-footer.style.padding = `${headerHeight / 3}px`; 
+// footer.style.height = `${headerHeight}px`;
+// footer.style.padding = `${headerHeight / 3}px`; 
 
 body.appendChild(footer);
 
@@ -95,6 +88,7 @@ messageForm.addEventListener('submit', (event) => {
 
     removeButton.addEventListener('click', (e) => {
         const entry = removeButton.parentNode;
+        console.log(entry);
         entry.remove();
 
         if (messageList.childElementCount === 0) {
@@ -156,18 +150,25 @@ const githubImg = document.querySelector('#connect img[alt="github icon"]');
 themeButton.addEventListener('click', () => {    
     body.classList.toggle('light-mode');
     footer.style.color = '#ffffff';
-    menuButton.classList.toggle('fill');
+    menuButton.classList.toggle('fill')
+
+    menuButton.addEventListener('click', () => {
+        if (document.body.classList.contains('light-mode')) {
+            menuButton.classList.toggle('fill');  
+        };
+    });
+    
 
     const navbarLinks = document.querySelectorAll('header .navbar > li > a');
     navbarLinks.forEach(link => {
-        link.classList.toggle('light-li');
+        link.classList.toggle('light-li');        
 });
 
     if (document.body.classList.contains('light-mode')) {
         themeImg.setAttribute('src', "./images/Moon.svg");
         themeImg.setAttribute('aria-label', "dark-theme-toggle");
         githubImg.setAttribute('src', "./images/github-mark.svg");
-        document.documentElement.style.setProperty("--color-link", "#000000");         
+        document.documentElement.style.setProperty("--color-link", "#000000");  
       } else {
         themeImg.setAttribute('src', "./images/Sun.svg");
         themeImg.setAttribute('aria-label', "light-theme-toggle");
@@ -183,78 +184,3 @@ themeButton.addEventListener('click', () => {
     
     projectItems.forEach(projItem => projItem.classList.toggle('light-mode-proj'));
 });
-
-
-// Edit message inside the form
-// const messageForm = document.forms['leave_message'];
-// const messageSection = document.getElementById('messages');
-// const messageList = messageSection.querySelector('ul');
-// const messagesHeader = messageSection.querySelector('h2');
-
-// let editingMessage = null; 
-
-// messageForm.addEventListener('submit', (returnedBrowserEventObject) => {
-//     returnedBrowserEventObject.preventDefault();
-
-//     const name = returnedBrowserEventObject.target.userName.value;
-//     const email = returnedBrowserEventObject.target.userEmail.value;
-//     const message = returnedBrowserEventObject.target.userMessage.value;
-
-//     if (editingMessage) {
-//         // Update the existing message
-//         const nameLink = editingMessage.querySelector('a');
-//         const messageSpan = editingMessage.querySelector('span');
-//         nameLink.href = `mailto:${email}`;
-//         nameLink.textContent = `${name}: `;
-//         messageSpan.textContent = message;
-
-//         editingMessage = null; 
-//     } else {
-        
-//         const newMessage = document.createElement('li');
-//         newMessage.innerHTML = `<a href="mailto:${email}">${name}: </a>
-//         <span>${message}</span>`;
-
-//         // Remove button
-//         const removeButton = document.createElement('button');
-//         removeButton.innerText = "Remove";
-//         removeButton.type = 'button';
-//         removeButton.classList.add('remove-btn', 'ylw-btn');
-
-//         removeButton.addEventListener('click', () => {
-//             const entry = removeButton.parentNode;
-//             entry.remove();
-
-//             if (messageList.childElementCount === 0) {
-//                 messageSection.classList.toggle('hidden');
-//             }
-//         });
-
-//         // Edit button
-//         const editButton = document.createElement('button');
-//         editButton.innerText = "Edit";
-//         editButton.type = 'button';
-//         editButton.classList.add('edit-btn', 'ylw-btn');
-
-//         editButton.addEventListener('click', () => {
-//             const nameLink = newMessage.querySelector('a');
-//             const messageSpan = newMessage.querySelector('span');
-
-            
-//             messageForm.userName.value = nameLink.textContent.replace(': ', '');
-//             messageForm.userEmail.value = nameLink.href.replace('mailto:', '');
-//             messageForm.userMessage.value = messageSpan.textContent;
-
-//             editingMessage = newMessage; 
-//         });
-
-//         newMessage.appendChild(removeButton);
-//         newMessage.appendChild(editButton);
-//         messageList.appendChild(newMessage);
-
-//         messageSection.classList.toggle('hidden');
-//         messagesHeader.setAttribute('tabindex', '0');
-//     }
-
-//     messageForm.reset(); 
-// });

@@ -287,14 +287,13 @@ fieldset {
   color: white;
   margin-top: 1em;
   padding: 0.5em 1em;
-  background-color: #a9a923;
+  background-color: #7a7a17;
   border-radius: 8px;  
   border: 1px solid #e1e1e1;
 }
 
 .ylw-btn:hover {
   background-color: #818119;
-  /* border-color: #959393; */
   border: 1px solid #a3a0a0;
 }
 
@@ -322,6 +321,16 @@ fieldset {
 
 #messages span {
   padding: 0 1em;
+}
+
+/* ========== FOOTER =========== */
+.footer {
+  text-align: center;
+  background-color: #282828e6;
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 80%;
+  padding: 1em;
 }
 
 /* ========== THEME ============= */
