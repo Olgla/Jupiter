@@ -2,10 +2,6 @@
   --color-link: white; 
 }
 
-:root {
-  --color-link: white; 
-}
-
 html {
   box-sizing: border-box;   
   scroll-behavior: smooth;
@@ -15,7 +11,6 @@ html {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;  
   box-sizing: border-box;  
 }
 
@@ -29,9 +24,7 @@ body {
 
 .main-div {
   padding-left: 12%;
-  padding-right: 12%;
-  padding-left: 12%;
-  padding-right: 12%;
+  padding-right: 12%; 
 }
 
 img {
@@ -74,11 +67,9 @@ h1, h2 {
 a:link {
   text-decoration: none;
   color: var(--color-link);
-  color: var(--color-link);
 }
 
 a:visited {  
-  color:var(--color-link);
   color:var(--color-link);
 }
 
@@ -95,10 +86,8 @@ a:hover {
 .header { 
   width: 100%;
   position: fixed;
-  position: fixed;
   top: 0;
   z-index: 1000;
-  padding: 0.5em 1em;
   padding: 0.5em 1em;
   display: flex;
   justify-content: space-between;
@@ -109,7 +98,6 @@ a:hover {
 .navbar {
   position: absolute;
   top: 0;
-  right: 1em;
   right: 1em;
   background-color: #282828e6;
   display: flex;
@@ -246,7 +234,6 @@ h1::after, h2::after {
   width: 32px;
 }
 
-
 /* ======== FORM ======= */
 .form {
   margin: 0 10%;
@@ -255,9 +242,6 @@ h1::after, h2::after {
   align-items: center;
 }
 
-fieldset {
-  border: 1px solid #00c800;
-}
 .form-label {
   display: block;
 }
@@ -293,6 +277,7 @@ fieldset {
 fieldset {
   border: none;
 }
+
 /* ========= BUTTONS ============ */
 .ylw-btn {
   font-size: 80%;
@@ -358,29 +343,7 @@ fieldset {
 .light-mode {
   background-color: white;
   color: black;
-  fill: black;   
-  fill: black;   
-}
-
-.fill {
-  fill: black;
-}
-
-.proj-item a:hover {
-  color: #00c800;  
-}
-
-.light-input {
-  border-color: black;
-  color: black;
-}
-
-.light-mode-proj {
-  color: black;
-}
-
-.light-li {
-  color: white !important;
+  fill: black;     
 }
 
 .fill {
