@@ -2,6 +2,10 @@
   --color-link: white; 
 }
 
+:root {
+  --color-link: white; 
+}
+
 html {
   box-sizing: border-box;   
   scroll-behavior: smooth;
@@ -11,6 +15,7 @@ html {
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
+  box-sizing: border-box;  
   box-sizing: border-box;  
 }
 
@@ -23,6 +28,8 @@ body {
 }
 
 .main-div {
+  padding-left: 12%;
+  padding-right: 12%;
   padding-left: 12%;
   padding-right: 12%;
 }
@@ -67,9 +74,11 @@ h1, h2 {
 a:link {
   text-decoration: none;
   color: var(--color-link);
+  color: var(--color-link);
 }
 
 a:visited {  
+  color:var(--color-link);
   color:var(--color-link);
 }
 
@@ -86,8 +95,10 @@ a:hover {
 .header { 
   width: 100%;
   position: fixed;
+  position: fixed;
   top: 0;
   z-index: 1000;
+  padding: 0.5em 1em;
   padding: 0.5em 1em;
   display: flex;
   justify-content: space-between;
@@ -98,6 +109,7 @@ a:hover {
 .navbar {
   position: absolute;
   top: 0;
+  right: 1em;
   right: 1em;
   background-color: #282828e6;
   display: flex;
@@ -287,14 +299,13 @@ fieldset {
   color: white;
   margin-top: 1em;
   padding: 0.5em 1em;
-  background-color: #a9a923;
+  background-color: #7a7a17;
   border-radius: 8px;  
   border: 1px solid #e1e1e1;
 }
 
 .ylw-btn:hover {
   background-color: #818119;
-  /* border-color: #959393; */
   border: 1px solid #a3a0a0;
 }
 
@@ -324,6 +335,16 @@ fieldset {
   padding: 0 1em;
 }
 
+/* ========== FOOTER =========== */
+.footer {
+  text-align: center;
+  background-color: #282828e6;
+  margin-top: 1em;
+  font-style: italic;
+  font-size: 80%;
+  padding: 1em;
+}
+
 /* ========== THEME ============= */
 .theme {
   border: none;
@@ -338,6 +359,28 @@ fieldset {
   background-color: white;
   color: black;
   fill: black;   
+  fill: black;   
+}
+
+.fill {
+  fill: black;
+}
+
+.proj-item a:hover {
+  color: #00c800;  
+}
+
+.light-input {
+  border-color: black;
+  color: black;
+}
+
+.light-mode-proj {
+  color: black;
+}
+
+.light-li {
+  color: white !important;
 }
 
 .fill {
