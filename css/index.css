@@ -15,7 +15,7 @@ html {
 }
 
 body {
-  background: black;
+  background: #342e37;
   color: white;
   font-family: Arial, Helvetica, sans-serif;  
   margin: 0;
@@ -323,7 +323,7 @@ fieldset {
 /* ========== FOOTER =========== */
 .footer {
   text-align: center;
-  background-color: #282828e6;
+  background-color: #585858e6;
   margin-top: 1em;
   font-style: italic;
   font-size: 80%;
@@ -341,7 +341,7 @@ fieldset {
   }
 
 .light-mode {
-  background-color: white;
+  background-color: #f2ebe1;
   color: black;
   fill: black;     
 }
